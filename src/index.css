@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom design tokens */
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-brand-muted: var(--brand-muted);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+}
+
+:root {
+  --radius: 0.75rem;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Brand: Deep Indigo */
+  --brand: hsl(245 70% 40%);
+  --brand-foreground: hsl(0 0% 100%);
+  --brand-subtle: hsl(245 60% 96%);
+  --brand-muted: hsl(245 40% 88%);
+
+  /* Surface colors - warm off-white */
+  --surface: hsl(240 20% 98%);
+  --surface-raised: hsl(0 0% 100%);
+
+  /* Semantic tokens */
+  --background: hsl(240 20% 97%);
+  --foreground: hsl(240 25% 12%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 25% 12%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(240 25% 12%);
+  --primary: hsl(245 70% 40%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(240 20% 94%);
+  --secondary-foreground: hsl(240 25% 30%);
+  --muted: hsl(240 15% 94%);
+  --muted-foreground: hsl(240 12% 52%);
+  --accent: hsl(245 60% 95%);
+  --accent-foreground: hsl(245 70% 35%);
+  --destructive: hsl(0 72% 51%);
+  --border: hsl(240 15% 90%);
+  --input: hsl(240 15% 91%);
+  --ring: hsl(245 70% 40%);
+
+  /* Status colors */
+  --success: hsl(152 55% 38%);
+  --success-bg: hsl(152 55% 95%);
+  --warning: hsl(38 90% 42%);
+  --warning-bg: hsl(38 90% 95%);
+
+  /* Charts */
+  --chart-1: hsl(245 70% 50%);
+  --chart-2: hsl(200 70% 50%);
+  --chart-3: hsl(152 55% 45%);
+  --chart-4: hsl(38 90% 50%);
+  --chart-5: hsl(340 70% 50%);
+
+  /* Sidebar */
+  --sidebar: hsl(245 30% 18%);
+  --sidebar-foreground: hsl(240 20% 90%);
+  --sidebar-primary: hsl(245 70% 65%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(245 30% 25%);
+  --sidebar-accent-foreground: hsl(240 20% 95%);
+  --sidebar-border: hsl(245 25% 25%);
+  --sidebar-ring: hsl(245 70% 65%);
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, hsl(245 70% 40%), hsl(280 65% 50%));
+  --gradient-subtle: linear-gradient(180deg, hsl(240 20% 97%), hsl(240 20% 95%));
+  --gradient-hero: linear-gradient(135deg, hsl(245 30% 18%) 0%, hsl(260 40% 28%) 100%);
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px hsl(240 25% 12% / 0.06), 0 4px 12px hsl(240 25% 12% / 0.06);
+  --shadow-elevated: 0 4px 20px hsl(245 70% 40% / 0.12), 0 1px 6px hsl(240 25% 12% / 0.08);
+  --shadow-brand: 0 4px 20px hsl(245 70% 40% / 0.25);
+
+  /* Transitions */
+  --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Sidebar nav item */
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sidebar-foreground);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+.sidebar-nav-item:hover {
+  background: hsl(245 30% 25%);
+  color: hsl(0 0% 100%);
+}
+.sidebar-nav-item.active {
+  background: var(--gradient-brand);
+  color: hsl(0 0% 100%);
+  box-shadow: var(--shadow-brand);
+}
+
+/* Stat card */
+.stat-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  transition: var(--transition-smooth);
+}
+.stat-card:hover {
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-1px);
+}
+
+/* Status badges */
+.badge-geplant { background: hsl(245 60% 94%); color: hsl(245 70% 35%); }
+.badge-aktiv { background: hsl(152 55% 93%); color: hsl(152 55% 30%); }
+.badge-abgeschlossen { background: hsl(240 12% 92%); color: hsl(240 12% 38%); }
+.badge-abgesagt { background: hsl(0 70% 94%); color: hsl(0 70% 40%); }
+
+/* Table row hover */
+.data-row {
+  transition: background 0.15s ease;
+}
+.data-row:hover {
+  background: hsl(245 60% 97%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(240 15% 85%); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(245 40% 70%); }

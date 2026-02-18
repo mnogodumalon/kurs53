@@ -1,0 +1,4 @@
+{"debug":"Calling MCP tool: create_apps","timestamp":"2026-02-18T11:37:31.825Z","sessionId":"39240224-7745-4d69-962d-82b2bdc66efd","cwd":"/home/user/app"}
+{"debug":"Tool 'create_apps' completed successfully in 2s","timestamp":"2026-02-18T11:37:34.230Z","sessionId":"39240224-7745-4d69-962d-82b2bdc66efd","cwd":"/home/user/app"}
+{"debug":"Calling MCP tool: generate_typescript","timestamp":"2026-02-18T11:37:50.246Z","sessionId":"39240224-7745-4d69-962d-82b2bdc66efd","cwd":"/home/user/app"}
+{"debug":"Tool 'generate_typescript' completed successfully in 11ms","timestamp":"2026-02-18T11:37:50.257Z","sessionId":"39240224-7745-4d69-962d-82b2bdc66efd","cwd":"/home/user/app"}
